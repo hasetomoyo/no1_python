@@ -1,9 +1,19 @@
 year_str = input('あなたの生まれ年を西暦4桁で入力してください： ')
 year = int(year_str)
-numbrt_of_eto = (year + 8) % 12
+number_of_eto = (year + 8) % 12
 eto_tuple = ('子',
              '牛',
+             '寅',
+             '卯',
+             '辰',
+             '巳',
+             '午',
+             '未',
+             '申',
+             '酉',
+             '戌',
+             '亥',
 )
 eto_name = eto_tuple[number_of_eto]
-print('あなたの絵とは{}です。 '.format(eto_name))
+print('あなたの干支は{}です。 '.format(eto_name))
  

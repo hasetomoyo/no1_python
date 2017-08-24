@@ -1,11 +1,21 @@
+bot_dict = {
+    'こんにちは': 'コンニチハ',
+    'ありがとう': 'ドウイタシマシテ',
+    'さようなら': 'サヨウナラ',
+    'かわいいね': 'アリガトウ',
+    }
+
 while True:
     command = input('pybot> ')
-    if 'こんにちは' in command:
-        print('コンニチハ')
-    elif 'ありがとう' in command:
-        print('ドウイタシマシテ')
-    elif 'さようなら' in command:
-        print('サヨウナラ')
+    response = ''
+    for message in bot_dict:
+        if message in command:
+            response = bot_dict[message]
+            break
+
+    if not response:
+        response = '何ヲ言ッテイルカ、ワカラナイ'
+    print(response)
+
+    if 'さようなら' in command:
         break
-    else:
-        print('何ヲ言ッテイルカ、ワカラナイ')

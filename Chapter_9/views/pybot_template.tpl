@@ -1,8 +1,6 @@
 <html>
 <body>
-<ul>
-<li>Hello World!</li>
-<li>現在時刻は{{now}}です。</li>
-</ul>
+<from_method="post" action="/hello">
+<input type="text"
 </body>
 </html>

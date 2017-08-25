@@ -10,12 +10,15 @@ def len_command(command):
 
 def heisei_command(command):
     heisei, year_str = command.split()
-    year = int(year_str)
-    if year >= 1989:
-        heisei_year = year - 1988
-        response = '西暦{}年ハ、平成{}年デス'.format(year, heisei_year)
-    else:
-        response = '西暦{}年ハ、平成デハアリマセン'.format(year)
+    try:
+        year = int(year_str)
+        if year >= 1989:
+            heisei_year = year - 1988
+            response = '西暦{}年ハ、平成{}年デス'.format(year, heisei_year)
+        else:
+            response = '西暦{}年ハ、平成デハアリマセン'.format(year)
+    except ValueError:
+        response = '数値ヲ指定シテクダサイ'
     return response
 
 command_file = open('pybot.txt', encoding='utf-8')

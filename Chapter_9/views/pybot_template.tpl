@@ -1,9 +1,9 @@
 <html>
 <body>
-<from method="post" action="/hello">
+<form method="post" action="/hello">
 <input type="text" name="input_text">
 <input type="submit" value="送信">
-</from>
+</form>
 <br>
 送信されたテキスト： {{text}}
 </body>
